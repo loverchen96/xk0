@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>选课助手.WEB版 | by夜雨</title>
+    <link rel="stylesheet" href="/Public/css/bootstrap.min.css">
+	<style type="text/css">  
+	.list-group{   
+		margin:0 30px; 
+	}
+	#welcome-text{
+		position: absolute;
+		top: 80%;
+		margin:0 30px; 
+	}
+	</style>  
+  </head>
+  <body>
+	<div class="page-header text-center">
+	  <h1>选课助手.WEB</br><small>【开发、测试ing】</small></h1>
+	</div>
+	
+	<div class="list-group">
+		<a href="/Home/Index/help" class="list-group-item list-group-item-success">
+		  <h4 class="list-group-item-heading">选课助手使用帮助</h4>
+		  <p class="list-group-item-text">点击查看。</p>
+		</a>
+		<a href="/Home/Index/login" class="list-group-item list-group-item-info">
+		  <h4 class="list-group-item-heading">选课助手登录入口</h4>
+		  <p class="list-group-item-text">点击登录使用选课助手WEB版所有功能。</p>
+		</a>
+		<a href="/Home/Index/xuanke_home" class="list-group-item list-group-item-warning">
+		  <h4 class="list-group-item-heading">选课助手功能界面</h4>
+		  <p class="list-group-item-text">点击打开选课助手功能主页。</p>
+		</a>
+	</div>
+	
+	<div >{$welcome}</div>
+	
+	<script src="/Public/js/jquery-2.1.3.min.js"></script>
+	<script src="/Public/js/bootstrap.min.js"></script>
+  </body>
+</html>  

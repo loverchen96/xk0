@@ -1,0 +1,8 @@
+cron:
+    - description: website_state_updata
+      url: /index.php/Home/Index/website_state
+      schedule: every 10 mins
+      timezone: Beijing
+
+handle:
+  - rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"

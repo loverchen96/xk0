@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>选课助手.WEB版 | by夜雨</title>
+    <link rel="stylesheet" href="/Public/css/bootstrap.min.css">  
+		<style type="text/css">  
+	.list-group{   
+		 margin:0 50px; 
+	}
+	</style>
+  </head>
+  <body>
+	<div class="page-header text-center">
+	  <h1>选课助手.绑定教务系统</br><small>【开发、测试ing】</small></h1>
+	</div>
+	<div class="page-header text-center">
+		<div class="list-group">
+			<a href="/Home/Index/xuanke_home" class="list-group-item list-group-item-info">
+			  <h4 class="list-group-item-heading">选课功能主页</h4>
+			  <p class="list-group-item-text">点击回到选课功能主页~</p>
+			</a>
+		</div>
+	</div>
+	<div class="container">
+		<form method="post" action="/index.php/Home/Index/xuanke_jiaowu_bangding">
+			  <div class="form-group">
+				<label for="exampleInputEmail1">学号:</label>
+				<empty name="xuehao">
+				<input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入学号" name="xuehao">
+				<else />
+				<input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入学号" name="xuehao" value="{$xuehao}" readonly>
+				</empty>
+			  </div>
+			  <div class="form-group">
+				<label for="exampleInputPassword1">教务系统密码:</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入教务系统密码" name="password">
+			  </div>
+			  <div class="checkbox">
+        <label>
+          <input type="checkbox" id="password"> 显示密码
+        </label>
+      </div> 
+			  <button type="submit" class="btn btn-success btn-block">绑定</button>
+		</form>
+	</div>
+	<script src="/Public/js/jquery-2.1.3.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	    $("#password").change(function(){
+		    if($("#password").is(":checked")){
+			    $("#exampleInputPassword1").attr("type","text");
+			}
+			else{
+			$("#exampleInputPassword1").attr("type","password");
+			}
+		});
+
+	});
+	</script>
+  </body>
+</html>  
